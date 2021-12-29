@@ -8,7 +8,7 @@ payments as (
 
 order_payments as (
     select
-        order_id,
+        payments.orderid,
         sum(case when status = 'success' then amount end) as amount
 
     from payments
